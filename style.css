@@ -20,6 +20,7 @@ h1 {
     width: 300px;
     margin: 0 auto;
     padding: 10px;
+    margin-top: 5%;
 }
 
 .input-el {
@@ -89,4 +90,8 @@ h1 {
 
 p {
     word-break: break-word;
+}
+
+i {
+    cursor: pointer;
 }

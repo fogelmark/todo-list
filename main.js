@@ -16,7 +16,7 @@ if (storageInput) {
 
 inputEl.addEventListener('keyup', e => {
     if (inputEl.value.trim() === '') {
-        alert('enter a task')
+        return false
     } else if (e.key == 'Enter') {
     taskArray.push({name: inputEl.value, status: 'pending'})
     inputEl.value = ''
@@ -54,11 +54,18 @@ function render() {
         <input onclick="updateStatus(this)" type="checkbox" id="${id}" ${isCompleted}/>
         <p class="${isCompleted}">${task.name}</p>
         </label>
-        <i class="fa-regular fa-circle-xmark" id="icon"></i>
+        <i onclick="clearTask(this)" class="fa-regular fa-circle-xmark" id="${id}"></i>
         </li>`
     })
     ulEl.innerHTML = listItems
 }
+
+function clearTask(clear) {
+    taskArray.splice(clear.id, 1)
+    localStorage.setItem('taskArray', JSON.stringify(taskArray))
+    render(taskArray)
+}
+
 
 function updateStatus(selectedTask) {
     let taskName = selectedTask.parentElement.lastElementChild;
