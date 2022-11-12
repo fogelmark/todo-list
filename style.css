@@ -52,14 +52,22 @@ h1 {
     position: relative;
 }
 
+.task-box {
+    display: flex;
+    flex-direction: column;
+}
+
 .task-box .task {
     list-style-type: none;
     border-bottom: 1px solid #9e9e9e;
-    min-width: 200px;
+    width: 200px;
     margin-top: 20px;
-    
-    /* animation-duration: 1s;
-    animation-name: slidein; */
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .task label {
@@ -79,14 +87,6 @@ h1 {
     cursor: pointer;
 }
 
-/* @keyframes slidein {
-    from {
-      margin-left: 50%;
-      width: 100%;
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  } */
+p {
+    word-break: break-word;
+}

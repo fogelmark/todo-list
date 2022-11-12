@@ -27,16 +27,16 @@ inputEl.addEventListener('keyup', e => {
 })
 
 
-// addBtn.addEventListener('click', function() {
-//     if (inputEl.value.trim() === '') {
-//         alert('enter a task')
-//     } else {
-//         taskArray.push({name: inputEl.value, status: 'pending'})
-//         inputEl.value = ''
-//         localStorage.setItem('taskArray', JSON.stringify(taskArray))
-//         render(taskArray)
-//     }
-// })
+addBtn.addEventListener('click', function() {
+    if (inputEl.value.trim() === '') {
+        alert('enter a task')
+    } else {
+        taskArray.push({name: inputEl.value, status: 'pending'})
+        inputEl.value = ''
+        localStorage.setItem('taskArray', JSON.stringify(taskArray))
+        render(taskArray)
+    }
+})
 
 clearBtn.addEventListener('dblclick', function() {
     taskArray = []
@@ -54,6 +54,7 @@ function render() {
         <input onclick="updateStatus(this)" type="checkbox" id="${id}" ${isCompleted}/>
         <p class="${isCompleted}">${task.name}</p>
         </label>
+        <i class="fa-regular fa-circle-xmark" id="icon"></i>
         </li>`
     })
     ulEl.innerHTML = listItems
