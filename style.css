@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+}
+
+h1 {
+    text-shadow: #d0d0d0 2px 2px;
+    margin-bottom: 15px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.input-el {
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+    outline: none;
+    color: black;
+    font-size: medium;
+}
+
+.line-div {
+    border-bottom: 1px solid #9e9e9e;
+    width: 200px;
+    margin-top: 15px;
+}
+
+#add-btn, #clear-btn {
+    padding: 5px;
+    margin: 15px 2px 10px 2px;
+    width: 6rem;
+    border-radius: 3px;
+    border-style: none;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.strike {
+    text-decoration: line-through;
+    position: relative;
+}
+
+.task-box .task {
+    list-style-type: none;
+    border-bottom: 1px solid #9e9e9e;
+    min-width: 200px;
+    margin-top: 20px;
+    
+    /* animation-duration: 1s;
+    animation-name: slidein; */
+}
+
+.task label {
+    display: flex;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.task label p.checked {
+    text-decoration: line-through;
+}
+
+
+.task label input {
+    margin-top: 1px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* @keyframes slidein {
+    from {
+      margin-left: 50%;
+      width: 100%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  } */
