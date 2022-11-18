@@ -49,8 +49,13 @@ h1 {
     outline: none;
 }
 
-#add-btn:focus, #clear-btn:hover {
+button, a:visited {
     outline: none;
+}
+
+button:hover, button:active, button:focus {
+    outline: none;
+    background: #ccc;
 }
 
 .strike {
